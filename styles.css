@@ -1,0 +1,116 @@
+/* General Body and HTML Styling */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #675e5e; /* Dark background for the programmer aesthetic */
+    color: #000000; /* Light text for contrast */
+    line-height: 1.6;
+}
+
+/* Container for page content to align it nicely */
+.container {
+    max-width: 960px;
+    margin: 20px auto;
+    background: #1e1e1e; /* Slightly lighter dark background */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+/* Header Styles */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+
+.profile-img {
+    width: 100px;
+    height: auto;
+    border-radius: 50%;
+    transition: transform 0.3s ease-in-out;
+}
+
+.profile-img:hover {
+    transform: rotate(360deg); /* Adds a playful spin on hover */
+}
+
+/* Navigation Styles */
+nav {
+    background: #373737;
+    text-align: center;
+    padding: 10px 0;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    padding: 10px 20px;
+    transition: background-color 0.3s;
+}
+
+nav ul li a:hover, nav ul li a:focus {
+    background-color: #555;
+}
+
+/* Section Styles */
+section {
+    margin: 20px 0;
+    padding: 20px;
+    background: #818080; /* Dark section backgrounds */
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+}
+
+h1, h2, h3 {
+    color: #4787ff; /* Vibrant color for headings */
+}
+
+/* Contact and Footer Styles */
+#contact {
+    background: #333;
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+}
+
+footer {
+    text-align: center;
+    padding: 10px 0;
+    margin-top: 20px;
+    background: #121212;
+    color: #ccc;
+}
+
+/* HR Styles */
+hr {
+    border: none;
+    height: 1px;
+    background: #4766ff; /* HR color to match heading color */
+    margin: 20px 0;
+}
+
+/* Responsive Design Adjustments */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+    }
+
+    .profile-img {
+        margin-bottom: 20px;
+    }
+
+    nav ul li a {
+        padding: 10px;
+    }
+}
