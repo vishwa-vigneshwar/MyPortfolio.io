@@ -3,19 +3,21 @@ body, html {
     margin: 0;
     padding: 0;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background: #675e5e; /* Dark background for the programmer aesthetic */
-    color: #000000; /* Light text for contrast */
+    background: #0D1B2A; /* Deep blue background */
+    color: #E0E1DD; /* Light grey text for contrast */
     line-height: 1.6;
+    overflow-x: hidden;
 }
 
 /* Container for page content to align it nicely */
 .container {
     max-width: 960px;
     margin: 20px auto;
-    background: #1e1e1e; /* Slightly lighter dark background */
+    background: #1B263B; /* Navy blue background */
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    overflow: hidden;
 }
 
 /* Header Styles */
@@ -24,85 +26,99 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 20px;
+    background-image: linear-gradient(to right, #073B4C, #118AB2); /* Blue gradient */
 }
 
 .profile-img {
     width: 100px;
     height: auto;
-    border-radius: 50%;
-    transition: transform 0.3s ease-in-out;
+    border-radius: 20%;
+    transition: transform 0.5s ease-in-out;
+    border: 3px solid #fff; /* White border for the image */
 }
 
 .profile-img:hover {
-    transform: rotate(360deg); /* Adds a playful spin on hover */
+    transform: scale(1.1) rotate(20deg); /* Enlarges and slightly rotates the image on hover */
 }
 
 /* Navigation Styles */
 nav {
-    background: #686767;
+    background: rgba(5, 16, 44, 0.9); /* Dark blue, slightly transparent */
     text-align: center;
     padding: 10px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
 
 nav ul {
     list-style: none;
     padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 nav ul li {
-    display: inline;
+    margin: 0 10px;
 }
 
 nav ul li a {
     text-decoration: none;
     color: #fff;
     padding: 10px 20px;
-    transition: background-color 0.3s;
+    transition: color 0.3s, transform
+    0.3s;
 }
 
 nav ul li a:hover, nav ul li a:focus {
-    background-color: #555;
+    color: #90E0EF; /* Lighter blue for hover effect */
+    transform: translateY(-5px) scale(1.1);
 }
 
 /* Section Styles */
 section {
     margin: 20px 0;
     padding: 20px;
-    background: #818080; /* Dark section backgrounds */
+    background: #132F40; /* Dark section backgrounds */
     border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+    transition: all 0.3s ease-in-out;
+}
+
+section:hover {
+    background: #0077B6; /* Lighter blue on hover */
+    transform: scale(1.03); /* Slightly enlarges the section on hover */
 }
 
 h1, h2, h3 {
-    color: #4766ff; /* Vibrant color for headings */
-}
-
-/* Contact and Footer Styles */
-#contact {
-    background: #818080;
-    padding: 20px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.3);
-}
-
-footer {
-    text-align: center;
-    padding: 10px 0;
-    margin-top: 20px;
-    background: #121212;
-    color: #ccc;
+    color: #48CAE4; /* Soft blue color for headings */
 }
 
 /* HR Styles */
 hr {
     border: none;
-    height: 1px;
-    background: #4766ff; /* HR color to match heading color */
+    height: 3px;
+    background: linear-gradient(to right, #03045E, #00B4D8); /* Blue gradient for horizontal rules */
     margin: 20px 0;
+}
+
+/* Contact and Footer Styles */
+#contact{
+    background: #132F40; /* Dark section backgrounds */
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+}
+
+footer {
+    background: rgba(5, 16, 44, 0.9); /* Dark blue, slightly transparent */
+    color: #90E0EF;
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.3);
 }
 
 /* Responsive Design Adjustments */
 @media (max-width: 768px) {
-    header {
+    header, nav ul {
         flex-direction: column;
     }
 
@@ -113,4 +129,82 @@ hr {
     nav ul li a {
         padding: 10px;
     }
+}
+.show {
+    animation: fadeInUp 0.5s ease forwards;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.typing {
+    font-size: 20px;
+    font-weight: bold;
+    color: #118AB2;
+    margin-top: 20px;
+}
+section:hover {
+    transition: transform 0.3s ease-in-out;
+}
+
+.dynamic-text {
+    color: #48CAE4;
+    font-size: 24px;
+    text-align: center;
+    padding: 20px;
+}
+
+body {
+    background-image: url('path/to/your/background.jpg');
+    background-size: cover;
+    background-attachment: fixed; /* Essential for parallax effect */
+    background-position: center;
+    animation: colorShift 10s infinite alternate;
+}
+
+
+
+@keyframes colorShift {
+    from {
+        background-color: #073B4C;
+    }
+    to {
+        background-color: #118AB2;
+    }
+}
+.animated {
+    opacity: 0;
+    transform: translateX(-100px);
+    transition: transform 0.8s ease-in-out, opacity 0.8s ease;
+}
+
+.in-view {
+    opacity: 1;
+    animation: zigzag 1.2s forwards;
+}
+
+@keyframes zigzag {
+    0% { transform: translateX(-100px); }
+    25% { transform: translateX(50px); }
+    50% { transform: translateX(-50px); }
+    75% { transform: translateX(25px); }
+    100% { transform: translateX(0px); }
+}
+
+.zoom-effect {
+    transition: transform 0.3s ease-in-out;
+    cursor: pointer;  
+}
+
+/* Additional styling for smooth experience */
+section {
+    overflow: hidden; 
 }
