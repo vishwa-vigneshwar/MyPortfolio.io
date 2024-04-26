@@ -39,7 +39,7 @@ header {
 
 /* Navigation Styles */
 nav {
-    background: #373737;
+    background: #686767;
     text-align: center;
     padding: 10px 0;
 }
@@ -74,12 +74,12 @@ section {
 }
 
 h1, h2, h3 {
-    color: #4787ff; /* Vibrant color for headings */
+    color: #4766ff; /* Vibrant color for headings */
 }
 
 /* Contact and Footer Styles */
 #contact {
-    background: #333;
+    background: #818080;
     padding: 20px;
     box-shadow: 0 2px 5px rgba(0,0,0,0.3);
 }
